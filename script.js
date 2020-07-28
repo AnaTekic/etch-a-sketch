@@ -62,7 +62,7 @@ changeSize.addEventListener("click", function (){
     for (var i = 0; i < childNodesArray.length; i++){
     childNodesArray[i].style.backgroundColor ="white";
      };
-
+        
          gameContainer.classList.add("apply-shake");
      
  
