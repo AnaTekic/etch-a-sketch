@@ -4,6 +4,7 @@ const clear = document.getElementById("clear");
 const changeSize = document.getElementById("size");
 const colors = document.getElementById("colors");
 let gridDiv;
+const gameContainer = document.querySelector(".game-container")
 
 
 //create grid dynamically - default value 16x16
@@ -50,16 +51,28 @@ changeSize.addEventListener("click", function (){
     e.target.style.backgroundColor ="red";
  
     });
+
  
+    
+    
 //  clear grid
-   clear.addEventListener("click", function (){        
+   clear.addEventListener("click", function (e){        
     let childNodesArray = etchContainer.children;
   
     for (var i = 0; i < childNodesArray.length; i++){
     childNodesArray[i].style.backgroundColor ="white";
      };
-     });  
+
+         gameContainer.classList.add("apply-shake");
+     
  
+ gameContainer.addEventListener("animationend", function (e) {
+     gameContainer.classList.remove("apply-shake");
+ });
+ 
+     });  
+
+
 
 //get random color
 

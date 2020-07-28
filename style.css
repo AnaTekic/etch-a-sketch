@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: calc(1em + 1vw)
+  font-size: 12px;
 }
 
 *, *:before, *:after {
@@ -31,7 +31,7 @@ body {
   position: fixed;
 display:block;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) ;
   border: 5px solid rgba(123,19,84,0.82);
   border-radius: 22px;
   height: 90vh;
@@ -94,7 +94,7 @@ font-family:Arial;
 width: 30%;
 height:100%;
 
-font-size: 0.6em;;
+font-size: 1.1em;;
 font-weight:bold;
 text-decoration:none;
 text-shadow:0px 1px 0px #ffffff;
@@ -108,6 +108,27 @@ background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
 background-color:#dfdfdf;
 }
 
+@keyframes shake {
+  0% { transform: translate(-51%, 1px) rotate(0deg); }
+  10% { transform: translate(-50%, -2px) rotate(-1deg); }
+  20% { transform: translate(-51%, 0px) rotate(1deg); }
+  30% { transform: translate(-50%, 2px) rotate(0deg); }
+  40% { transform: translate(-51%, -1px) rotate(1deg); }
+  50% { transform: translate(-50%, 2px) rotate(-1deg); }
+  60% { transform: translate(-51%, 1px) rotate(0deg); }
+  70% { transform: translate(-50%, 1px) rotate(-1deg); }
+  80% { transform: translate(-51%, -1px) rotate(1deg); }
+  90% { transform: translate(-50%, 2px) rotate(0deg); }
+  100% { transform: translate(-50%, -2px) rotate(-1deg); }
+
+}
+
+.apply-shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+
+
 @media only screen and (max-width: 700px) {
 .game-container {
   width: 85vw;
@@ -117,7 +138,7 @@ background-color:#dfdfdf;
 width: 90%;
 }
 .btns {
-  font-size: 0.6em;
+  font-size: 1em;
 }
 .title{
   font-size:1.3em;
