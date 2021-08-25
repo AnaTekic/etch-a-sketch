@@ -1,3 +1,3 @@
 # etch-a-sketch
 the odin procject javascript/css exercise
-https://parchedpanda.github.io/etch-a-sketch/
+https://anatekic.github.io/etch-a-sketch/
